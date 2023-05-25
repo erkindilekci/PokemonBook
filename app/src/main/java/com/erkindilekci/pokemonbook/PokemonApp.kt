@@ -6,7 +6,7 @@ import timber.log.Timber
 import timber.log.Timber.DebugTree
 
 @HiltAndroidApp
-class PokemonApp: Application() {
+class PokemonApp : Application() {
     override fun onCreate() {
         super.onCreate()
         Timber.plant(DebugTree())

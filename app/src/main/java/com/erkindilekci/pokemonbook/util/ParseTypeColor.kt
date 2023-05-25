@@ -3,11 +3,34 @@ package com.erkindilekci.pokemonbook.util
 import androidx.compose.ui.graphics.Color
 import com.erkindilekci.pokemonbook.data.remote.responses.Stat
 import com.erkindilekci.pokemonbook.data.remote.responses.Type
-import com.erkindilekci.pokemonbook.ui.theme.*
-import java.util.*
+import com.erkindilekci.pokemonbook.presentation.ui.theme.AtkColor
+import com.erkindilekci.pokemonbook.presentation.ui.theme.DefColor
+import com.erkindilekci.pokemonbook.presentation.ui.theme.HPColor
+import com.erkindilekci.pokemonbook.presentation.ui.theme.SpAtkColor
+import com.erkindilekci.pokemonbook.presentation.ui.theme.SpDefColor
+import com.erkindilekci.pokemonbook.presentation.ui.theme.SpdColor
+import com.erkindilekci.pokemonbook.presentation.ui.theme.TypeBug
+import com.erkindilekci.pokemonbook.presentation.ui.theme.TypeDark
+import com.erkindilekci.pokemonbook.presentation.ui.theme.TypeDragon
+import com.erkindilekci.pokemonbook.presentation.ui.theme.TypeElectric
+import com.erkindilekci.pokemonbook.presentation.ui.theme.TypeFairy
+import com.erkindilekci.pokemonbook.presentation.ui.theme.TypeFighting
+import com.erkindilekci.pokemonbook.presentation.ui.theme.TypeFire
+import com.erkindilekci.pokemonbook.presentation.ui.theme.TypeFlying
+import com.erkindilekci.pokemonbook.presentation.ui.theme.TypeGhost
+import com.erkindilekci.pokemonbook.presentation.ui.theme.TypeGrass
+import com.erkindilekci.pokemonbook.presentation.ui.theme.TypeGround
+import com.erkindilekci.pokemonbook.presentation.ui.theme.TypeIce
+import com.erkindilekci.pokemonbook.presentation.ui.theme.TypeNormal
+import com.erkindilekci.pokemonbook.presentation.ui.theme.TypePoison
+import com.erkindilekci.pokemonbook.presentation.ui.theme.TypePsychic
+import com.erkindilekci.pokemonbook.presentation.ui.theme.TypeRock
+import com.erkindilekci.pokemonbook.presentation.ui.theme.TypeSteel
+import com.erkindilekci.pokemonbook.presentation.ui.theme.TypeWater
+import java.util.Locale
 
 fun parseTypeToColor(type: Type): Color {
-    return when(type.type.name.toLowerCase(Locale.ROOT)) {
+    return when (type.type.name.toLowerCase(Locale.ROOT)) {
         "normal" -> TypeNormal
         "fire" -> TypeFire
         "water" -> TypeWater
@@ -31,7 +54,7 @@ fun parseTypeToColor(type: Type): Color {
 }
 
 fun parseStatToColor(stat: Stat): Color {
-    return when(stat.stat.name.toLowerCase()) {
+    return when (stat.stat.name.toLowerCase()) {
         "hp" -> HPColor
         "attack" -> AtkColor
         "defense" -> DefColor
@@ -43,7 +66,7 @@ fun parseStatToColor(stat: Stat): Color {
 }
 
 fun parseStatToAbbr(stat: Stat): String {
-    return when(stat.stat.name.toLowerCase()) {
+    return when (stat.stat.name.toLowerCase()) {
         "hp" -> "HP"
         "attack" -> "Atk"
         "defense" -> "Def"
